@@ -1,0 +1,101 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  background: #000;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: orange;
+}
+
+/* Sections with animation */
+section {
+  padding: 50px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+  section {
+    padding: 30px;
+  }
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #000;
+  color: #fff;
+}
+
+.dark-mode header {
+  background: #fff;
+}
+
+.dark-mode nav a {
+  color: #000;
+}
+
+.dark-mode nav a:hover {
+  color: orange;
+}
+
+.dark-mode footer {
+  background: #fff;
+  color: #000;
+}
+
+/* Project List Styling */
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project {
+  background: #f4f4f4;
+  border: 2px solid #000;
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  background: #ffe5b4; /* light orange accent */
+}
